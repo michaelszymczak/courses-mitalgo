@@ -21,6 +21,6 @@ class RotationTest extends Specification {
     }
 
     private static int[] solutionInOnMemory(int[] A, int K) {
-        new RotationOnOn().solution(A, K)
+        new Rotation().solution(A, K)
     }
 }

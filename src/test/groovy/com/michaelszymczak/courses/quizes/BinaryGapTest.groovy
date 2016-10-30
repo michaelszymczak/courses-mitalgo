@@ -1,11 +1,11 @@
-package com.michaelszymczak.courses.quizes.binarygap
+package com.michaelszymczak.courses.quizes
 
 import spock.lang.Specification
 import spock.lang.Timeout
 
 import java.util.concurrent.TimeUnit
 
-class BinaryGapShould extends Specification {
+class BinaryGapTest extends Specification {
 
     @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
     def "should count the longest sequence of zeros surrounded by ones"() {
@@ -27,6 +27,6 @@ class BinaryGapShould extends Specification {
     }
 
     private static int gap(String binaryRepresentation) {
-        new Solution().solution(Integer.parseInt(binaryRepresentation, 2))
+        new BinaryGap().solution(Integer.parseInt(binaryRepresentation, 2))
     }
 }

@@ -1,4 +1,4 @@
-package com.michaelszymczak.courses.quizes.oddoccurrences
+package com.michaelszymczak.courses.quizes
 
 import spock.lang.Specification
 

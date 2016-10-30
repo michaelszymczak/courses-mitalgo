@@ -1,6 +1,6 @@
 package com.michaelszymczak.courses.quizes;
 
-public class RotationOnOn
+public class Rotation
 {
     int[] solution(int[] A, int K)
     {

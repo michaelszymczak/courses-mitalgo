@@ -1,6 +1,6 @@
-package com.michaelszymczak.courses.quizes.binarygap;
+package com.michaelszymczak.courses.quizes;
 
-class Solution {
+class BinaryGap {
     public int solution(int N) {
         return new Data(N)
                 .withAllTrailingZerosStripped()
