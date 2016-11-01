@@ -19,7 +19,7 @@ public class Shooting {
 
     private Integer calc(List<Integer> group) {
         Integer oneWithGun = group.get(0);
-        if (group.size() <= STEP)  { return oneWithGun; }
+        if (group.size() <= 2)  { return oneWithGun; }
         group = group.subList(STEP, group.size()); // check if operation with O(1) time complexity
         group.add(oneWithGun);
 
@@ -27,9 +27,10 @@ public class Shooting {
     }
 
     private Integer calc(Deque<Integer> group) {
-        if (group.size() <= STEP)  { return group.peek(); }
-
         Integer oneWithGun = group.removeFirst();
+
+        if (group.size() < 2)  { return oneWithGun; }
+
         group.removeFirst();
         group.addLast(oneWithGun);
 
