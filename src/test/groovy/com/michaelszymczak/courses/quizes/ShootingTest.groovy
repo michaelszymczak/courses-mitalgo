@@ -6,7 +6,8 @@ class ShootingTest extends Specification {
 
     def "should work"() {
         expect:
-        new Shooting().calculate(input) == result
+        new Shooting().calculateUsingList(input) == result
+        new Shooting().calculateUsingDequeue(input) == result
 
         where:
         result | input
