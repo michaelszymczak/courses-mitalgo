@@ -5,8 +5,6 @@ import java.util.stream.IntStream;
 
 public class MaxProfit
 {
-    private static final int NO_PROFIT = 0;
-
     private final int[] sequence;
 
     public static MaxProfit of(int... sequence)
@@ -19,14 +17,7 @@ public class MaxProfit
     }
 
     public Integer profit() {
-        return isEnoughTimeToBuyAndSell() ? calculatedProfit() : NO_PROFIT;
+        return IntStream.of(sequence).max().orElse(0) - IntStream.of(sequence).min().orElse(0);
     }
 
-    private int calculatedProfit() {
-        return IntStream.of(sequence).max().getAsInt() - sequence[0];
-    }
-
-    private boolean isEnoughTimeToBuyAndSell() {
-        return sequence.length > 1;
-    }
 }
