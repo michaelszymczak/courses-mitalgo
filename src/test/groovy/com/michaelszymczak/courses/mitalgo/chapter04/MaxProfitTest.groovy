@@ -1,5 +1,6 @@
 package com.michaelszymczak.courses.mitalgo.chapter04
 
+import spock.lang.Ignore
 import spock.lang.Specification
 
 class MaxProfitTest extends Specification {
@@ -37,6 +38,21 @@ class MaxProfitTest extends Specification {
         inputPrices          | expectedMaxProfit
         [4, 5, 3, 7, 9, 11]  | 8
         [5, 5, 4, 3, 10, 10] | 7
+    }
+
+    def "should look for max profit in the middle if the highest price occurs before the lowest"() {
+        given:
+        int[] prices = inputPrices
+
+        expect:
+        MaxProfit.of(prices).profit() == expectedMaxProfit
+
+        where:
+        inputPrices         | expectedMaxProfit
+        [8, 3, 7, 1]        | 4
+        [25, 23, 21, 21, 1] | 0
+        [25, 23, 23, 25, 1] | 2
+        [10, 12, 7, 10, 5]  | 3
     }
 
     private static int calculatedMaxProfitOf(List prices) {

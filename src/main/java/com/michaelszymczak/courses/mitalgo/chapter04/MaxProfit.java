@@ -17,7 +17,13 @@ public class MaxProfit
     }
 
     public Integer profit() {
-        return IntStream.of(sequence).max().orElse(0) - IntStream.of(sequence).min().orElse(0);
+        return IntStream.range(0, sequence.length)
+                .map(bought -> IntStream.range(bought + 1, sequence.length)
+                        .map(sold -> sequence[sold] - sequence[bought])
+                        .max()
+                        .orElse(0))
+                .max()
+                .orElse(0);
     }
 
 }
