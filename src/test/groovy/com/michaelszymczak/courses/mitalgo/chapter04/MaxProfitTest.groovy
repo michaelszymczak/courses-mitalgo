@@ -1,6 +1,5 @@
 package com.michaelszymczak.courses.mitalgo.chapter04
 
-import spock.lang.Ignore
 import spock.lang.Specification
 
 class MaxProfitTest extends Specification {
