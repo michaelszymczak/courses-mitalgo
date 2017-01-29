@@ -1,5 +1,7 @@
 # Implementing algorithms using TDD
 
+[![Build Status](https://travis-ci.org/michaelszymczak/courses-mitalgo.svg?branch=master)](https://travis-ci.org/michaelszymczak/courses-mitalgo)
+
 Playground for practicing TDD as a tool to implement various algorithms.
 Main source of algorithms is the [Introduction to Algorithms](https://mitpress.mit.edu/books/introduction-algorithms) ,
 but it also features some puzzles found on the internet, [Codility](https://codility.com/) etc.
